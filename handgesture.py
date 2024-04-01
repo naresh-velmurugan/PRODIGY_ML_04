@@ -5,7 +5,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
-dataset_dir = r"C:\Users\nares\PycharmProjects\handgesturemodel\.venv"
+dataset_dir = r"C:\Users\nares\PycharmProjects\handgesturemodel\.venv" #Here add the path of your dataset directory
 
 img_width, img_height = 150, 150
 
@@ -53,3 +53,5 @@ model.fit(
     validation_data=validation_generator,
     validation_steps=validation_generator.samples // validation_generator.batch_size)
 model.save('hand_gesture_model.h5')
+
+#After executing this code your model will be saved as hand_gesture_model in h5 format.You can load the model in other code and use it
